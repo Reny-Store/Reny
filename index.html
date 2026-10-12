@@ -1,0 +1,2163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      color-scheme: light
+    }
+
+    body {
+      margin: 0
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    [hidden] {
+      display: none !important
+    }
+  </style>
+  <title>Reny Home Decor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Hanken+Grotesk:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Cairo:wght@400;600;700&display=swap">
+  <style>
+    /* Warm, quiet and tactile: cream, blush, olive and brushed brass. */
+    :root {
+      --bg: #fffaf3;
+      --surface: #f8eee3;
+      --fg: #3e4532;
+      --muted: #707564;
+      --line: #e5d7c5;
+      --terra: #d99a9b;
+      --btn: #6e7653;
+      --pinktext: #a96d72;
+      --olive: #6e7653;
+      --leaf2: #a4ab80;
+      --gold: #b28a45;
+      --cream: #fffaf3;
+      --on: #ffffff;
+      --tint1: #f5dfd8;
+      --tint2: #e3e6d1;
+      --tint3: #f1e4d1;
+      --tint4: #eaded4;
+      --wall: #f7eee3;
+      --floor: #e6d7c0;
+      --sofa: #cdd2b6;
+      --furn: #a47e55;
+      --glow: rgba(217, 154, 155, .10);
+      --ext1: #e0658a;
+      --ext2: #c4507a;
+      --g1: rgba(196, 80, 122, .30);
+      --g2: rgba(238, 127, 159, .28);
+      --g3: rgba(238, 127, 159, 0);
+      --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --display: "Playfair Display", "Times New Roman", serif;
+      --brand-en: "Playfair Display", "Times New Roman", serif;
+      --brand-ar: "Aref Ruqaa", "Cairo", serif;
+      --arabic: "Cairo", "Segoe UI", Tahoma, sans-serif;
+      --arabic-display: "Baloo Bhaijaan 2", "Cairo", "Segoe UI", sans-serif;
+    }
+
+    body[data-mode="dark"] {
+      --bg: #2a1a20;
+      --surface: #34222a;
+      --fg: #f8e6e8;
+      --muted: #c7a2ad;
+      --line: #4b3039;
+      --terra: #f79db8;
+      --btn: #ee8fa8;
+      --pinktext: #f79db8;
+      --olive: #8fc184;
+      --leaf2: #6c9a62;
+      --gold: #f0b79c;
+      --cream: #fbeee9;
+      --on: #2a1a20;
+      --tint1: #46303a;
+      --tint2: #2f3b2b;
+      --tint3: #4a3a2f;
+      --tint4: #47303f;
+      --wall: #3d2830;
+      --floor: #2d1d23;
+      --sofa: #3f4d39;
+      --furn: #7a525c;
+      --glow: rgba(230, 140, 165, .2);
+      --ext1: #c85f80;
+      --ext2: #a84a68;
+      --g1: rgba(0, 0, 0, .35);
+      --g2: rgba(247, 157, 184, .32);
+      --g3: rgba(247, 157, 184, .42);
+      color-scheme: dark
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.55 var(--body)
+    }
+
+    #app {
+      background: var(--bg);
+      color: var(--fg);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: clip
+    }
+
+    #app[dir="rtl"] {
+      font-family: var(--arabic)
+    }
+
+    #app[dir="rtl"] h1,
+    #app[dir="rtl"] h2 {
+      font-family: var(--arabic);
+      font-weight: 700
+    }
+
+    a {
+      color: inherit
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--terra);
+      outline-offset: 3px;
+      border-radius: 4px
+    }
+
+    [id] {
+      scroll-margin-top: 84px
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin-inline: auto;
+      padding-inline: 20px
+    }
+
+    main,
+    .foot {
+      position: relative;
+      z-index: 1
+    }
+
+    .vine svg,
+    .deco svg {
+      display: block;
+      width: 100%;
+      height: auto
+    }
+
+    .deco {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0
+    }
+
+    /* header */
+    .top {
+      position: sticky;
+      top: env(safe-area-inset-top, 0px);
+      z-index: 20;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .top .wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-height: 68px;
+      direction: ltr
+    }
+
+    #app[dir="rtl"] .nav {
+      direction: rtl
+    }
+
+    .home {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none
+    }
+
+    .mark {
+      width: 40px;
+      height: 40px;
+      display: block;
+      flex: none
+    }
+
+    .mark text {
+      font-family: var(--brand-en);
+      font-weight: 600;
+      paint-order: stroke fill;
+      stroke: rgba(83, 75, 66, .46);
+      stroke-width: .7px;
+      stroke-linejoin: round
+    }
+
+    .wordmark {
+      font-family: var(--brand-en);
+      font-weight: 600;
+      font-size: 2.2rem;
+      line-height: 1.1;
+      letter-spacing: .01em;
+      color: var(--terra);
+      text-shadow: 1px 1.5px 0 rgba(83, 75, 66, .42), 2px 3px 7px rgba(83, 75, 66, .10)
+    }
+
+    #app[dir="rtl"] .wordmark,
+    #app[dir="rtl"] .bigmark {
+      font-family: var(--brand-ar);
+      font-weight: 400;
+      letter-spacing: 0;
+      text-shadow: 1px 1.5px 0 rgba(83, 75, 66, .25), 2px 3px 7px rgba(83, 75, 66, .08)
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      margin-inline-start: auto
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .95rem
+    }
+
+    .nav a:hover {
+      color: var(--fg)
+    }
+
+    .tools {
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: transparent;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: .9rem;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .pill:hover {
+      border-color: var(--fg)
+    }
+
+    .pill .ico {
+      width: 15px;
+      height: 15px;
+      color: var(--olive)
+    }
+
+    .cartbtn {
+      background: var(--fg);
+      color: var(--bg);
+      border-color: var(--fg)
+    }
+
+    .cartbtn b {
+      background: var(--btn);
+      color: var(--on);
+      border-radius: 999px;
+      min-width: 22px;
+      height: 22px;
+      display: inline-grid;
+      place-items: center;
+      font-size: .78rem;
+      font-weight: 600;
+      padding-inline: 6px
+    }
+
+    .short {
+      display: none
+    }
+
+    /* hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 48px;
+      align-items: center;
+      padding-block: 56px 40px;
+      position: relative
+    }
+
+    .eyebrow {
+      font-size: .78rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--pinktext);
+      font-weight: 600
+    }
+
+    #app[dir="rtl"] .eyebrow {
+      letter-spacing: 0
+    }
+
+    h1 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(2.75rem, 6.7vw, 5.15rem);
+      line-height: .95;
+      margin: 14px 0 18px;
+      text-wrap: balance
+    }
+
+    #app[dir="rtl"] h1 {
+      font-size: clamp(2.6rem, 6.6vw, 4.6rem);
+      line-height: 1.15
+    }
+
+    #app[dir="rtl"] .hero h1 {
+      font-size: clamp(1.95rem, 4.9vw, 3.1rem)
+    }
+
+    .lede {
+      max-width: 46ch;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 0 0 28px
+    }
+
+    .cta {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      background: var(--btn);
+      color: var(--on);
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 26px;
+      text-decoration: none;
+      font-weight: 600
+    }
+
+    .cta:hover {
+      filter: brightness(1.07)
+    }
+
+    .hero-art {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      justify-self: end;
+      aspect-ratio: 1/.82;
+      display: grid;
+      place-items: center
+    }
+
+    .bigmark {
+      position: relative;
+      z-index: 2;
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(4.6rem, 12vw, 8.6rem);
+      line-height: 1.05;
+      color: var(--terra);
+      letter-spacing: .01em;
+      text-shadow: 2px 3px 0 rgba(83, 75, 66, .40), 5px 6px 12px rgba(83, 75, 66, .10)
+    }
+
+    .hero-art .vine {
+      position: absolute;
+      width: 26%;
+      z-index: 1
+    }
+
+    .hero-art .v1 {
+      left: -9%;
+      bottom: -8%
+    }
+
+    .hero-art .v2 {
+      right: -8%;
+      top: -12%;
+      transform: rotate(180deg)
+    }
+
+    .dot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--terra);
+      opacity: .85;
+      z-index: 2
+    }
+
+    .d1 {
+      left: 12%;
+      top: 18%
+    }
+
+    .d2 {
+      right: 14%;
+      bottom: 20%;
+      width: 12px;
+      height: 12px
+    }
+
+    .d3 {
+      left: 30%;
+      bottom: 10%;
+      width: 10px;
+      height: 10px
+    }
+
+    .d4 {
+      right: 30%;
+      top: 8%;
+      width: 14px;
+      height: 14px
+    }
+
+    /* soft glow: fades to nothing well inside its box, so it never leaves a hard edge */
+    #homeView {
+      position: relative
+    }
+
+    #homeView::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 760px;
+      pointer-events: none;
+      background: radial-gradient(ellipse 30% 44% at 66% 44%, var(--glow), transparent)
+    }
+
+    #homeView>section {
+      z-index: 1
+    }
+
+    /* shop */
+    .shop {
+      padding-block: 36px 56px;
+      position: relative
+    }
+
+    .shophead {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 1
+    }
+
+    h2 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(2.1rem, 4.2vw, 3.1rem);
+      line-height: 1.05;
+      margin: 0
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .shop-tools {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1
+    }
+
+    .search {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      border-radius: 999px;
+      padding: 13px 18px;
+      color: var(--fg);
+      font: inherit;
+      min-height: 48px
+    }
+
+    .search::placeholder {
+      color: var(--muted)
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: transparent;
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: .9rem;
+      line-height: 1
+    }
+
+    .chip[aria-pressed="true"] {
+      background: var(--olive);
+      border-color: var(--olive);
+      color: var(--on)
+    }
+
+    .chip {
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, background .18s ease
+    }
+
+    .chip:hover,
+    .chip:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(178, 138, 69, .85);
+      box-shadow: 0 5px 14px rgba(91, 83, 60, .10), 0 0 0 2px rgba(217, 154, 155, .12)
+    }
+
+    .sort-select {
+      appearance: none;
+      min-height: 43px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--bg);
+      color: var(--fg);
+      padding: 9px 38px 9px 14px;
+      font: inherit;
+      background-image: linear-gradient(45deg, transparent 50%, var(--olive) 50%), linear-gradient(135deg, var(--olive) 50%, transparent 50%);
+      background-position: calc(100% - 18px) 18px, calc(100% - 13px) 18px;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat
+    }
+
+    #app[dir="rtl"] .sort-select {
+      padding: 9px 14px 9px 38px;
+      background-position: 18px 18px, 23px 18px
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px 18px;
+      position: relative;
+      z-index: 1
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0
+    }
+
+    .art {
+      aspect-ratio: 1/1;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      text-decoration: none
+    }
+
+    .card:hover .art,
+    .card:focus-within .art {
+      transform: translateY(-5px) scale(1.015);
+      border-color: rgba(178, 138, 69, .72);
+      box-shadow: 0 10px 24px rgba(91, 83, 60, .14), 0 0 0 3px rgba(217, 154, 155, .15)
+    }
+
+    .card:hover h3 a,
+    .card:focus-within h3 a {
+      color: var(--olive)
+    }
+
+    .art svg {
+      width: 74%;
+      height: 74%
+    }
+
+    .art {
+      position: relative
+    }
+
+    .art img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 12px 0 2px
+    }
+
+    .card h3 a {
+      text-decoration: none
+    }
+
+    .card h3 a:hover {
+      text-decoration: underline
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: .88rem;
+      margin: 0
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px
+    }
+
+    .price {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600
+    }
+
+    .add {
+      border: 1px solid var(--fg);
+      background: transparent;
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: .85rem;
+      line-height: 1
+    }
+
+    .add:hover {
+      background: var(--fg);
+      color: var(--bg)
+    }
+
+    .a-terra {
+      fill: var(--terra)
+    }
+
+    .a-olive {
+      fill: var(--olive)
+    }
+
+    .a-gold {
+      fill: var(--gold)
+    }
+
+    .a-cream {
+      fill: var(--cream)
+    }
+
+    .s-terra,
+    .s-olive,
+    .s-gold,
+    .s-cream {
+      fill: none;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+
+    .s-terra {
+      stroke: var(--terra)
+    }
+
+    .s-olive {
+      stroke: var(--olive)
+    }
+
+    .s-gold {
+      stroke: var(--gold)
+    }
+
+    .s-cream {
+      stroke: var(--cream)
+    }
+
+    .add:disabled,
+    .cta:disabled {
+      opacity: .5;
+      cursor: not-allowed
+    }
+
+    .add:disabled:hover {
+      background: transparent;
+      color: inherit
+    }
+
+    .card.is-sold .art {
+      opacity: .6
+    }
+
+    /* story */
+    .story {
+      background: var(--surface);
+      border-block: 1px solid var(--line);
+      padding-block: 56px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .story .wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      position: relative;
+      z-index: 1
+    }
+
+    .story p {
+      color: var(--muted);
+      max-width: 50ch;
+      margin: 16px 0 0
+    }
+
+    .points {
+      display: grid;
+      align-content: start
+    }
+
+    .points div {
+      padding-block: 18px;
+      border-top: 1px solid var(--line);
+      font-family: var(--display);
+      font-size: 1.7rem;
+      line-height: 1.2
+    }
+
+    #app[dir="rtl"] .points div {
+      font-family: var(--arabic);
+      font-size: 1.3rem;
+      font-weight: 600
+    }
+
+    .points div:last-child {
+      border-bottom: 1px solid var(--line)
+    }
+
+    /* product page */
+    .back {
+      display: inline-flex;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--muted);
+      margin-block: 22px 0;
+      font-size: .95rem
+    }
+
+    .back::before {
+      content: "\2190"
+    }
+
+    #app[dir="rtl"] .back::before {
+      content: "\2192"
+    }
+
+    .pd {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      padding-block: 20px 36px;
+      align-items: start
+    }
+
+    .stage {
+      position: relative;
+      aspect-ratio: 4/3;
+      border-radius: 8px;
+      overflow: hidden;
+      display: grid;
+      place-items: center
+    }
+
+    .media-wrap {
+      position: relative
+    }
+
+    /* real photos: square frame, image fully visible (no crop), absolutely fitted */
+    .stage[data-kind="img"] {
+      aspect-ratio: 1/1;
+      background: #fff;
+      border: 1px solid var(--line);
+      cursor: zoom-in
+    }
+
+    .stage img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 14px;
+      transition: transform .18s ease;
+      transform-origin: center center;
+      user-select: none;
+      -webkit-user-drag: none
+    }
+
+    .stage.is-zooming {
+      cursor: zoom-out;
+      touch-action: none
+    }
+
+    .stage.is-zooming img {
+      transform: scale(2.4);
+      transition: none
+    }
+
+    .stage.is-zooming>svg {
+      transform: scale(1.85);
+      cursor: zoom-out
+    }
+
+    .stage>svg {
+      transition: transform .22s ease;
+      transform-origin: center center
+    }
+
+    .zoom-control {
+      position: absolute;
+      inset-inline-end: 14px;
+      inset-block-end: 14px;
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 13px;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      color: var(--fg);
+      font: inherit;
+      font-size: .86rem;
+      font-weight: 600;
+      box-shadow: 0 5px 14px rgba(60, 53, 39, .12)
+    }
+
+    .zoom-control:hover,
+    .zoom-control[aria-pressed="true"] {
+      background: var(--olive);
+      border-color: var(--olive);
+      color: var(--on)
+    }
+
+    .stage[data-kind="art"] svg,
+    .stage[data-kind="close"] svg {
+      width: 70%;
+      height: 90%
+    }
+
+    .stage[data-kind="room"] svg {
+      width: 100%;
+      height: 100%
+    }
+
+    .thumbs {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap
+    }
+
+    .tb {
+      width: 78px;
+      aspect-ratio: 1;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      overflow: hidden;
+      padding: 0;
+      display: grid;
+      place-items: center
+    }
+
+    .tb[aria-pressed="true"] {
+      border-color: var(--terra)
+    }
+
+    .tb svg {
+      width: 86%;
+      height: 86%
+    }
+
+    .tb[data-kind="room"] svg {
+      width: 100%;
+      height: 100%
+    }
+
+    .tb {
+      position: relative
+    }
+
+    .tb img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+      background: #fff
+    }
+
+    .pd .cat {
+      font-size: .78rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--pinktext);
+      font-weight: 600
+    }
+
+    #app[dir="rtl"] .pd .cat {
+      letter-spacing: 0
+    }
+
+    .pd h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin: 8px 0 6px
+    }
+
+    #app[dir="rtl"] .pd h1 {
+      font-size: clamp(2rem, 4.4vw, 2.8rem)
+    }
+
+    .pd .big {
+      font-size: 1.6rem;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      margin: 6px 0 14px
+    }
+
+    .pd .desc {
+      color: var(--muted);
+      max-width: 52ch;
+      margin: 0 0 20px
+    }
+
+    .buy {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px
+    }
+
+    .qty {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .qty button {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: transparent;
+      line-height: 1
+    }
+
+    .qty span {
+      min-width: 1.4em;
+      text-align: center;
+      font-variant-numeric: tabular-nums
+    }
+
+    .buy .qty button {
+      width: 38px;
+      height: 38px;
+      font-size: 1.1rem
+    }
+
+    .ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--fg);
+      border-radius: 999px;
+      padding: 12px 22px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem
+    }
+
+    .ghost:hover {
+      background: var(--fg);
+      color: var(--bg)
+    }
+
+    .specs {
+      display: grid;
+      margin: 22px 0 0
+    }
+
+    .spec {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 12px;
+      padding-block: 11px;
+      border-top: 1px solid var(--line)
+    }
+
+    .spec:last-child {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .spec dt {
+      color: var(--muted);
+      font-size: .9rem
+    }
+
+    .spec dd {
+      margin: 0;
+      min-width: 0
+    }
+
+    .space {
+      padding-block: 12px 40px
+    }
+
+    .space .head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: end;
+      gap: 14px;
+      margin-bottom: 16px
+    }
+
+    .scene-box {
+      aspect-ratio: 4/3;
+      max-height: 560px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--wall)
+    }
+
+    .scene-box svg {
+      display: block;
+      width: 100%;
+      height: 100%
+    }
+
+    .space .note {
+      color: var(--muted);
+      font-size: .85rem;
+      margin: 10px 0 0
+    }
+
+    .related {
+      padding-block: 20px 56px
+    }
+
+    .related h2 {
+      margin-bottom: 20px
+    }
+
+    /* footer */
+    .foot {
+      padding-block: 40px;
+      border-top: 1px solid var(--line)
+    }
+
+    .foot .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      justify-content: space-between;
+      align-items: start
+    }
+
+    .foot small {
+      color: var(--muted);
+      display: block;
+      margin-top: 6px
+    }
+
+    .foot .wordmark {
+      font-size: 2.4rem
+    }
+
+    .contact {
+      display: grid;
+      gap: 6px;
+      font-variant-numeric: tabular-nums
+    }
+
+    .contact span {
+      color: var(--muted);
+      font-size: .85rem
+    }
+
+    /* drawer */
+    .scrim {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .42);
+      z-index: 30
+    }
+
+    .drawer {
+      position: fixed;
+      z-index: 31;
+      inset-block: 0;
+      inset-inline-end: 0;
+      width: min(420px, 100%);
+      background: var(--surface);
+      border-inline-start: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px))
+    }
+
+    .drawer header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px
+    }
+
+    .drawer h2 {
+      font-size: 2rem
+    }
+
+    .items {
+      flex: 1;
+      overflow: auto;
+      display: grid;
+      gap: 4px;
+      align-content: start;
+      min-height: 0
+    }
+
+    .empty {
+      color: var(--muted);
+      padding-block: 24px
+    }
+
+    .line {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding-block: 10px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .line .thumb {
+      width: 56px;
+      height: 56px;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      overflow: hidden
+    }
+
+    .line .thumb svg {
+      width: 80%;
+      height: 80%
+    }
+
+    .line .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #fff
+    }
+
+    .line strong {
+      display: block;
+      font-size: .95rem
+    }
+
+    .line strong a {
+      text-decoration: none
+    }
+
+    .line .qty {
+      margin-top: 4px
+    }
+
+    .sum {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 8px
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      font-variant-numeric: tabular-nums
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: .82rem;
+      margin: 10px 0 0
+    }
+
+    .send {
+      display: flex;
+      width: 100%
+    }
+
+    .send[aria-disabled="true"] {
+      opacity: .45;
+      pointer-events: none
+    }
+
+    .customer-fields {
+      display: grid;
+      gap: 9px;
+      margin: 14px 0
+    }
+
+    .customer-fields label {
+      font-size: .78rem;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .customer-fields input,
+    .customer-fields textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      border-radius: 8px;
+      padding: 10px 11px;
+      color: var(--fg);
+      font: inherit
+    }
+
+    .customer-fields textarea {
+      min-height: 58px;
+      resize: vertical
+    }
+
+    .address-label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px
+    }
+
+    .gps-btn {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--olive);
+      padding: 6px 10px;
+      font: inherit;
+      font-size: .78rem;
+      font-weight: 600
+    }
+
+    .gps-btn:hover {border-color: var(--olive); background:var(--tint2)}
+    .gps-status {margin: -3px 0 0; color: var(--muted); font-size: .76rem; min-height: 1.2em}
+
+    .payment-options {
+      border: 0;
+      padding: 0;
+      margin: 2px 0 0;
+      display: grid;
+      gap: 7px
+    }
+
+    .payment-options legend {font-size: .78rem; color: var(--muted); font-weight: 600; padding: 0}
+    .payment-options div {display: flex; gap: 8px; flex-wrap: wrap}
+    .payment-options label {display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; padding: 7px 11px; color: var(--fg); font-size: .84rem}
+    .payment-options input {accent-color: var(--olive); width: auto; margin: 0}
+
+    .order-summary {
+      font-size: .84rem;
+      color: var(--muted);
+      margin: 0 0 10px
+    }
+
+    @media (max-width:900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-block: 36px 24px
+      }
+
+      .scene,
+      .hero-art {
+        justify-self: center;
+        max-width: 360px
+      }
+
+      .story .wrap {
+        grid-template-columns: 1fr;
+        gap: 28px
+      }
+
+      .pd {
+        grid-template-columns: 1fr;
+        gap: 24px
+      }
+
+      .nav {
+        display: none
+      }
+
+      .tools {
+        margin-inline-start: auto
+      }
+    }
+
+    @media (max-width:520px) {
+      body {
+        font-size: 15px
+      }
+
+      .wrap {
+        padding-inline: 16px
+      }
+
+      .top .wrap {
+        min-height: 62px
+      }
+
+      .hero {
+        padding-block: 26px 18px;
+        gap: 14px
+      }
+
+      .hero-art {
+        order: -1;
+        max-width: 250px;
+        aspect-ratio: 1.35
+      }
+
+      .hero-art .vine {
+        width: 22%
+      }
+
+      h1 {
+        font-size: clamp(2.35rem, 10.5vw, 3.1rem);
+        line-height: .98;
+        margin: 8px 0 12px
+      }
+
+      #app[dir="rtl"] .hero h1 {
+        font-size: clamp(1.9rem, 8.8vw, 2.65rem)
+      }
+
+      .lede {
+        font-size: 1rem;
+        margin-bottom: 20px
+      }
+
+      .cta {
+        min-height: 48px;
+        padding: 12px 20px
+      }
+
+      .shop {
+        padding-block: 28px 42px
+      }
+
+      .shophead {
+        align-items: start;
+        margin-bottom: 14px
+      }
+
+      .chips {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        margin-inline: -2px;
+        scrollbar-width: none
+      }
+
+      .chip {
+        white-space: nowrap;
+        min-height: 38px
+      }
+
+      .card h3 {
+        font-size: .93rem;
+        margin-top: 9px
+      }
+
+      .meta {
+        font-size: .8rem
+      }
+
+      .row {
+        margin-top: 8px
+      }
+
+      .price {
+        font-size: .9rem
+      }
+
+      .drawer {
+        width: 100%;
+        padding: 16px;
+        padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px))
+      }
+
+      .line {
+        grid-template-columns: 48px 1fr auto;
+        gap: 9px
+      }
+
+      .line .thumb {
+        width: 48px;
+        height: 48px
+      }
+
+      .full {
+        display: none
+      }
+
+      .short {
+        display: inline
+      }
+
+      .pill {
+        padding: 8px 11px
+      }
+
+      .wordmark {
+        font-size: 1.9rem
+      }
+
+      .top .wrap {
+        gap: 10px
+      }
+    }
+
+    @media (max-width:420px) {
+      .grid {
+        gap: 18px 12px
+      }
+
+      .add {
+        padding: 7px 10px
+      }
+
+      .row {
+        flex-wrap: wrap
+      }
+
+      .spec {
+        grid-template-columns: 100px 1fr
+      }
+    }
+
+    @media (hover:none) {
+      .art:active {
+        transform: scale(.985);
+        border-color: rgba(178, 138, 69, .72)
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .art {
+        transition: none
+      }
+
+      .card:hover .art {
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="fl" viewBox="-10 -10 20 20">
+      <g fill="var(--terra)">
+        <circle cx="0" cy="-5" r="4.2" />
+        <circle cx="4.8" cy="-1.5" r="4.2" />
+        <circle cx="3" cy="4" r="4.2" />
+        <circle cx="-3" cy="4" r="4.2" />
+        <circle cx="-4.8" cy="-1.5" r="4.2" />
+      </g>
+      <circle r="2.4" fill="var(--gold)" />
+    </symbol>
+    <symbol id="lf" viewBox="0 0 30 52">
+      <path d="M15 52C1 38 1 14 15 0c14 14 14 38 0 52Z" fill="currentColor" />
+      <path d="M15 50V10" stroke="var(--bg)" stroke-width="1.2" opacity=".35" fill="none" />
+    </symbol>
+  </svg>
+
+  <div id="app" dir="ltr">
+    <header class="top" id="top">
+      <div class="wrap">
+        <!-- Home button: the Reny mark. On a real host you can change href="#top" to href="/" -->
+        <a class="home" href="#top" data-go="top" aria-label="Reny home">
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M4 46V22C4 11 12 3 24 3s20 8 20 19v24z" fill="var(--btn)" />
+            <path d="M10 46V23c0-8 5-14 14-14s14 6 14 14v23" fill="none" stroke="var(--cream)" stroke-width="1.5"
+              opacity=".5" />
+            <text id="markLetter" x="24" y="36" text-anchor="middle" font-size="28" fill="var(--on)">R</text>
+          </svg>
+          <span class="wordmark" data-wm>Reny</span>
+        </a>
+        <nav class="nav">
+          <a href="#shop" data-go="shop" data-i="nav_shop">Shop</a>
+          <a href="#story" data-go="story" data-i="nav_story">Story</a>
+          <a href="#contact" data-go="contact" data-i="nav_contact">Contact</a>
+        </nav>
+        <div class="tools">
+          <button class="pill" id="themeBtn" type="button" aria-label="Change theme">
+            <svg class="ico" id="themeIco" viewBox="0 0 24 24" aria-hidden="true"></svg>
+            <span class="full" id="themeLbl">Dark</span>
+          </button>
+          <button class="pill" id="langBtn" type="button" aria-label="Language"><span class="full"
+              id="langFull">عربي</span><span class="short" id="langShort">ع</span></button>
+          <button class="pill cartbtn" id="cartBtn" type="button"><span data-i="order">Order</span><b
+              id="count">0</b></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="homeView">
+        <section class="wrap hero">
+          <div>
+            <div class="eyebrow" data-i="eyebrow">Home decoration</div>
+            <h1 data-i="h1">Feels Like Home. Feels Like You.</h1>
+            <p class="lede" data-i="lede">Your home should tell the story of who you are, and be a collection of what
+              you love</p>
+            <a class="cta" href="#shop" data-go="shop" data-i="cta">Shop the edit</a>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <div class="bigmark" data-wm>Reny</div>
+            <div class="vine v1" data-vine></div>
+            <div class="vine v2" data-vine></div>
+            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span
+              class="dot d4"></span>
+          </div>
+        </section>
+
+        <section class="wrap shop" id="shop">
+          <div class="deco" style="top:-34px;inset-inline-end:6px;width:104px;transform:scaleX(-1)" data-vine></div>
+          <div class="shophead">
+            <h2 data-i="shop_h">This season's edit</h2>
+          </div>
+          <div class="shop-tools">
+            <input class="search" id="search" type="search" autocomplete="off" data-ph="search"
+              placeholder="Search pieces, materials or rooms" aria-label="Search products">
+            <select class="sort-select" id="sort" aria-label="Sort products">
+              <option value="featured" data-i="sort_featured">Featured</option>
+              <option value="price-low" data-i="sort_low">Price: low to high</option>
+              <option value="price-high" data-i="sort_high">Price: high to low</option>
+              <option value="name" data-i="sort_name">Name: A–Z</option>
+            </select>
+            <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+          </div>
+          <div class="grid" id="grid"></div>
+        </section>
+
+        <section class="story" id="story">
+          <div class="deco" style="bottom:-24px;inset-inline-start:-6px;width:130px;transform:rotate(-8deg)" data-vine>
+          </div>
+          <div class="wrap">
+            <div>
+              <div class="eyebrow" data-i="story_eye">Our approach</div>
+              <h2 data-i="story_h">Chosen slowly.</h2>
+              <p data-i="story_p">Reny is a small edit of home pieces: natural materials, calm colours and shapes that
+                last longer than a season.</p>
+            </div>
+            <div class="points">
+              <div data-i="pt1">Natural materials</div>
+              <div data-i="pt2">A calm palette</div>
+              <div data-i="pt3">Order on WhatsApp</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="productView" class="wrap" hidden></div>
+    </main>
+
+    <footer class="foot" id="contact">
+      <div class="wrap">
+        <div>
+          <span class="wordmark" data-wm>Reny</span>
+          <small data-i="tag">Home, beautifully lived.</small>
+        </div>
+        <div class="contact">
+          <div>WhatsApp: <b id="waShow"></b></div>
+          <div>Instagram: <b id="igShow"></b></div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="scrim" id="scrim" hidden></div>
+    <aside class="drawer" id="drawer" hidden aria-label="Order">
+      <header>
+        <h2 data-i="order_h">Your order</h2>
+        <button class="pill" id="closeBtn" type="button" data-i="close">Close</button>
+      </header>
+      <div class="items" id="items"></div>
+      <div class="sum">
+        <div class="total"><span data-i="total">Total</span><span id="total">0</span></div>
+        <p class="order-summary" id="orderSummary"></p>
+        <div class="customer-fields">
+          <label for="customerName" data-i="customer_name">Your name</label>
+          <input id="customerName" type="text" autocomplete="name" data-ph="customer_name_ph" placeholder="Name">
+          <label for="customerPhone" data-i="customer_phone">Phone number</label>
+          <input id="customerPhone" type="tel" inputmode="tel" autocomplete="tel" data-ph="customer_phone_ph"
+            placeholder="01…">
+          <label for="customerAddress" data-i="customer_address">Delivery address (type it in)</label>
+          <textarea id="customerAddress" autocomplete="street-address" data-ph="customer_address_ph"
+            placeholder="Area, street, building, floor, apartment"></textarea>
+          <div class="address-label-row">
+            <button class="gps-btn" id="gpsBtn" type="button">Share my location (optional)</button>
+          </div>
+          <p class="gps-status" id="gpsStatus" aria-live="polite"></p>
+          <fieldset class="payment-options">
+            <legend data-i="payment_method">Payment method</legend>
+            <div>
+              <label><input type="radio" name="payment" value="cash" checked><span data-i="payment_cash">Cash on delivery</span></label>
+              <label><input type="radio" name="payment" value="instapay"><span data-i="payment_instapay">InstaPay</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <a class="cta send" id="send" href="#" target="_blank" rel="noopener" aria-disabled="true" data-i="send">Send
+          order on WhatsApp</a>
+        <p class="note" data-i="note">Prices are samples. Delivery and payment are confirmed on WhatsApp.</p>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ============================================================
+         DATA SOURCE - everything (products, categories, detail lines,
+         page texts, settings) lives in the Google Sheet.
+
+         1. Upload reny-products.xlsx to Google Sheets (File > Import).
+         2. File > Share > Publish to web > publish the whole document.
+         3. Paste the publish id below (the long text after /d/e/ in the
+            published link, starts with 2PACX-).
+         4. Put each tab's gid below (the number after gid= in the tab's URL).
+         While "id" is empty the page reads the local files in /data.
+         ============================================================ */
+      var SHEET = {
+        id: "2PACX-1vTfc0NQ2_LjBo_0CFcCBhrbOdGLy1kYjGB8HFciT5r8DRpVNqY9m1ZaS7QqMXLkVYFKhJCjs-UmU42H",
+        gids: {products: "0", categories: "1", specs: "2", texts: "3", settings: "4"}
+      };
+
+      var SETTINGS = {whatsapp: "", whatsappShow: "", instagram: "", currency: {en: "EGP", ar: "ج.م"}, brand: {en: "Reny", ar: "ريني"}, orderTitle: "Reny Home Decor"};
+      var CATEGORIES = {};
+      var SPECS = [];
+      var PRODUCTS = [];
+      var DATA_STATE = "loading";
+
+      /* ============================================================
+         4) APP CODE  -  no need to edit below this line
+         ============================================================ */
+      /* ---------- sheet loader ---------- */
+      function parseCSV(text) {
+        var rows = [], row = [], cur = "", q = false, i, c;
+        text = text.replace(/^﻿/, "");
+        for (i = 0; i < text.length; i++) {
+          c = text.charAt(i);
+          if (q) {
+            if (c === '"') {if (text.charAt(i + 1) === '"') {cur += '"'; i++} else q = false}
+            else cur += c;
+          } else if (c === '"') q = true;
+          else if (c === ",") {row.push(cur); cur = ""}
+          else if (c === "\n" || c === "\r") {
+            if (c === "\r" && text.charAt(i + 1) === "\n") i++;
+            row.push(cur); rows.push(row); row = []; cur = "";
+          } else cur += c;
+        }
+        if (cur !== "" || row.length) {row.push(cur); rows.push(row)}
+        return rows;
+      }
+      function rowsToObjects(rows) {
+        if (!rows.length) return [];
+        var head = rows[0].map(function (h) {return h.trim()});
+        return rows.slice(1).filter(function (r) {return r.some(function (v) {return String(v).trim() !== ""})}).map(function (r) {
+          var o = {}; head.forEach(function (h, i) {if (h) o[h] = r[i] == null ? "" : String(r[i]).trim()}); return o;
+        });
+      }
+      function fetchText(url) {
+        return fetch(url).then(function (r) {
+          if (!r.ok) throw new Error(url + " " + r.status);
+          return r.text();
+        }).then(function (t) {
+          if (/^\s*</.test(t)) throw new Error(url + " is not CSV (is the sheet published?)");
+          return t;
+        });
+      }
+      function loadTab(name) {
+        var gid = SHEET.gids[name], local = "data/" + name + ".csv";
+        var remote = (SHEET.id && gid !== "" && gid != null) ? "https://docs.google.com/spreadsheets/d/e/" + SHEET.id + "/pub?gid=" + gid + "&single=true&output=csv" : "";
+        var p = remote ? fetchText(remote).catch(function (e) {console.warn("Sheet failed, using local copy:", e.message); return fetchText(local)}) : fetchText(local);
+        return p.then(function (t) {return rowsToObjects(parseCSV(t))});
+      }
+      function yes(v, def) {
+        v = String(v == null ? "" : v).trim().toLowerCase();
+        if (v === "") return def;
+        return !(v === "no" || v === "false" || v === "0" || v === "n");
+      }
+      function imgSrc(f) {
+        f = f.trim();
+        if (!f) return "";
+        if (/^(https?:)?\/\//i.test(f) || /^data:/i.test(f)) return f;
+        f = f.replace(/^\.?\//, "").replace(/^images\//, "");
+        return "images/" + f.split("/").map(encodeURIComponent).join("/");
+      }
+      var MANIFEST = [];
+      /* photos found by product id: 9.png = main, 9-2.png, 9-3.png = extra (no need to write names in the sheet) */
+      function imagesFor(id) {
+        var re = new RegExp("^" + id + "(?:[-_](\\d+))?\\.(?:webp|jpe?g|png|avif|gif)$", "i");
+        return MANIFEST.map(function (f) {var m = re.exec(f); return m ? {f: f, n: m[1] ? +m[1] : 1} : null})
+          .filter(Boolean).sort(function (a, b) {return a.n - b.n}).map(function (x) {return "images/" + encodeURIComponent(x.f)});
+      }
+      function bi(r, k) {return {en: r[k + "_en"] || "", ar: r[k + "_ar"] || r[k + "_en"] || ""}}
+      function applyData(d) {
+        var st = {}; d.settings.forEach(function (r) {if (r.key) st[r.key] = r.value || ""});
+        var wa = (st.whatsapp || "").replace(/\D/g, "");
+        if (wa.charAt(0) === "0") wa = "20" + wa.slice(1);
+        SETTINGS.whatsapp = wa;
+        SETTINGS.whatsappShow = st.whatsapp_show || "";
+        SETTINGS.instagram = st.instagram || "";
+        if (st.currency_en) SETTINGS.currency.en = st.currency_en;
+        if (st.currency_ar) SETTINGS.currency.ar = st.currency_ar;
+        if (st.brand_en) SETTINGS.brand.en = st.brand_en;
+        if (st.brand_ar) SETTINGS.brand.ar = st.brand_ar;
+        if (st.order_title) SETTINGS.orderTitle = st.order_title;
+
+        CATEGORIES = {}; d.categories.forEach(function (r) {if (r.key) CATEGORIES[r.key] = {en: r.en || r.key, ar: r.ar || r.en || r.key}});
+        SPECS = d.specs.filter(function (r) {return r.key}).map(function (r) {return {key: r.key, label: {en: r.en || r.key, ar: r.ar || r.en || r.key}}});
+        d.texts.forEach(function (r) {if (!r.key) return; if (r.en) T.en[r.key] = r.en; if (r.ar) T.ar[r.key] = r.ar});
+
+        var seen = {};
+        PRODUCTS = d.products.map(function (r, i) {
+          var id = parseInt(r.id, 10) || (i + 1);
+          if (seen[id] || !yes(r.active, true) || !(r.name_en || r.name_ar)) return null;
+          seen[id] = 1;
+          var sp = {}; SPECS.forEach(function (x) {var v = bi(r, x.key); if (v.en || v.ar) sp[x.key] = v});
+          return {
+            id: id, category: r.category || "", price: parseFloat(String(r.price).replace(/[^\d.]/g, "")) || 0,
+            images: (r.images || "").trim() ? r.images.split("|").map(imgSrc).filter(Boolean) : imagesFor(id), art: r.art || "", tint: parseInt(r.tint, 10) || 1,
+            place: r.place || "table", order: r.sort === "" || r.sort == null ? id : (parseFloat(r.sort) || id), inStock: yes(r.in_stock, true),
+            name: bi(r, "name"), short: bi(r, "short"), description: bi(r, "description"), specs: sp
+          };
+        }).filter(Boolean).sort(function (a, b) {return (a.order - b.order) || (a.id - b.id)});
+      }
+      function loadAll() {
+        var names = ["products", "categories", "specs", "texts", "settings"];
+        var man = fetch("images/manifest.json").then(function (r) {return r.ok ? r.json() : []}).catch(function () {return []});
+        return Promise.all([man].concat(names.map(function (n) {
+          return loadTab(n).catch(function (e) {if (n === "products") throw e; console.warn("Optional tab missing: " + n, e.message); return []});
+        }))).then(function (r) {MANIFEST = Array.isArray(r[0]) ? r[0] : []; applyData({products: r[1], categories: r[2], specs: r[3], texts: r[4], settings: r[5]})});
+      }
+
+      var ART = {
+        vase: '<path class="a-terra" d="M62 128C34 128 36 84 62 72V58H98V72C124 84 126 128 98 128Z"/><path class="s-olive" d="M80 58C80 42 72 32 64 24M80 58C82 42 92 32 100 26"/><ellipse class="a-olive" cx="62" cy="24" rx="5" ry="10" transform="rotate(-28 62 24)"/><ellipse class="a-olive" cx="101" cy="26" rx="5" ry="10" transform="rotate(30 101 26)"/>',
+        lamp: '<path class="a-cream" d="M48 78L60 40H100L112 78Z"/><rect class="a-gold" x="76" y="78" width="8" height="36"/><ellipse class="a-gold" cx="80" cy="118" rx="24" ry="8"/>',
+        cushion: '<rect class="a-olive" x="32" y="42" width="96" height="80" rx="18"/><path class="s-cream" stroke-dasharray="2 7" d="M44 82H116M80 54V110"/>',
+        mirror: '<path class="a-gold" d="M50 134V70A30 30 0 0 1 110 70V134Z"/><path class="a-cream" d="M59 126V70A21 21 0 0 1 101 70V126Z" opacity=".85"/><path class="s-gold" d="M70 64L88 96" opacity=".6"/>',
+        candle: '<rect class="a-terra" x="54" y="72" width="52" height="54" rx="9"/><rect class="a-cream" x="54" y="72" width="52" height="14" rx="7"/><path class="a-gold" d="M80 36C91 49 89 61 80 64C71 61 69 49 80 36Z"/>',
+        basket: '<path class="s-olive" d="M44 78C44 36 116 36 116 78"/><path class="a-gold" d="M28 78H132C132 114 108 132 80 132C52 132 28 114 28 78Z"/><path class="s-cream" d="M38 94H122M45 108H115M57 121H103"/>',
+        art: '<rect class="a-cream" x="34" y="28" width="92" height="104" rx="4"/><circle class="a-terra" cx="80" cy="66" r="22"/><path class="a-olive" d="M34 132V106C58 92 90 106 126 96V132Z"/>',
+        throwb: '<rect class="a-olive" x="28" y="54" width="104" height="66" rx="7"/><path class="s-cream" d="M28 76H132M28 98H132"/><path class="s-gold" d="M46 54V120M66 54V120"/>'
+      };
+
+      /* Room scenes for "see it in your space": each has a background and slots where a product is placed.
+         m "rest" = product sits on a surface at y; m "mid" = product centred on y. s = size. */
+      var ROOMS = {
+        living: {
+          base: '<rect width="400" height="300" fill="var(--wall)"/><rect y="226" width="400" height="74" fill="var(--floor)"/><rect y="222" width="400" height="6" fill="var(--furn)" opacity=".35"/>' +
+            '<path d="M28 162V74a42 42 0 0 1 84 0v88z" fill="var(--tint3)"/><path d="M70 32v130M28 104h84" stroke="var(--wall)" stroke-width="3"/>' +
+            '<rect x="18" y="178" width="104" height="8" rx="2" fill="var(--furn)"/><rect x="26" y="186" width="5" height="40" fill="var(--furn)"/><rect x="109" y="186" width="5" height="40" fill="var(--furn)"/>' +
+            '<rect x="136" y="150" width="190" height="76" rx="14" fill="var(--sofa)"/><rect x="128" y="186" width="206" height="40" rx="12" fill="var(--sofa)"/><rect x="128" y="186" width="206" height="40" rx="12" fill="#000" opacity=".08"/><rect x="146" y="226" width="6" height="12" fill="var(--furn)"/><rect x="310" y="226" width="6" height="12" fill="var(--furn)"/>',
+          slots: {table: {m: "rest", x: 70, y: 178, s: 86}, wall: {m: "mid", x: 231, y: 92, s: 100}, floor: {m: "rest", x: 358, y: 250, s: 84}, soft: {m: "rest", x: 230, y: 204, s: 84}}
+        },
+        bedroom: {
+          base: '<rect width="400" height="300" fill="var(--wall)"/><rect y="226" width="400" height="74" fill="var(--floor)"/><rect y="222" width="400" height="6" fill="var(--furn)" opacity=".35"/>' +
+            '<rect x="96" y="112" width="228" height="56" rx="10" fill="var(--furn)"/><rect x="90" y="160" width="240" height="56" rx="8" fill="var(--cream)"/><rect x="90" y="182" width="240" height="36" rx="6" fill="var(--sofa)"/>' +
+            '<rect x="110" y="146" width="84" height="30" rx="12" fill="var(--cream)" stroke="var(--line)"/><rect x="226" y="146" width="84" height="30" rx="12" fill="var(--cream)" stroke="var(--line)"/><rect x="98" y="218" width="6" height="14" fill="var(--furn)"/><rect x="316" y="218" width="6" height="14" fill="var(--furn)"/>' +
+            '<rect x="16" y="172" width="70" height="7" rx="2" fill="var(--furn)"/><rect x="22" y="179" width="58" height="46" fill="var(--furn)" opacity=".85"/><rect x="40" y="190" width="22" height="3" rx="1.5" fill="var(--cream)" opacity=".7"/>',
+          slots: {table: {m: "rest", x: 51, y: 172, s: 70}, wall: {m: "mid", x: 210, y: 62, s: 88}, floor: {m: "rest", x: 362, y: 252, s: 80}, soft: {m: "rest", x: 210, y: 208, s: 80}}
+        }
+      };
+
+      var ICON_MOON = '<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="currentColor"/>';
+      var ICON_SUN = '<circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>';
+      function leafyVine() {
+        var pts = [[34, 288, -50, .9, 0], [43, 245, 55, .85, 1], [55, 208, -55, .85, 0], [78, 176, 50, .8, 1], [104, 149, -50, .75, 0], [121, 122, 52, .75, 1], [133, 96, -45, .7, 0], [142, 66, 45, .65, 1], [167, 26, -40, .6, 0], [206, 8, 10, .55, 1]];
+        var s = '<svg viewBox="0 0 220 340" aria-hidden="true"><path d="M20 336C46 270 36 214 78 176S130 108 142 66S176 22 206 8" fill="none" stroke="var(--olive)" stroke-width="3" stroke-linecap="round"/>';
+        pts.forEach(function (p) {
+          s += '<g transform="translate(' + p[0] + ' ' + p[1] + ') rotate(' + p[2] + ') scale(' + p[3] + ')" style="color:var(--' + (p[4] ? 'leaf2' : 'olive') + ')"><use href="#lf" x="-15" y="-52" width="30" height="52"/></g>';
+        });
+        s += '<use href="#fl" x="46" y="156" width="28" height="28"/><use href="#fl" x="138" y="104" width="24" height="24"/><use href="#fl" x="176" y="28" width="20" height="20"/></svg>';
+        return s;
+      }
+
+      var T = {
+        en: {
+          nav_shop: "Shop", nav_story: "Story", nav_contact: "Contact", order: "Order", eyebrow: "Home decoration", h1: "Feels Like Home. Feels Like You.",
+          lede: "Your home should tell the story of who you are, and be a collection of what you love.",
+          cta: "Add a story to your home", shop_h: "Every piece starts a story at home.", story_eye: "Our approach", story_h: "Chosen slowly.",
+          story_p: "Reny is a small edit of home pieces: natural materials, calm colours and shapes that last longer than a season.",
+          pt1: "Natural materials", pt2: "A calm palette", pt3: "Order on WhatsApp", tag: "Home, beautifully lived.",
+          order_h: "Your order", close: "Close", total: "Total", send: "Send order on WhatsApp",
+          note: "Prices are samples. Delivery and payment are confirmed on WhatsApp.",
+          add: "Add to order", added: "Added", empty: "Nothing here yet. Add a piece you like.", all: "All", search: "Search pieces, materials or rooms",
+          sort_featured: "Sort: Featured", sort_low: "Price: low to high", sort_high: "Price: high to low", sort_name: "Name: A–Z",
+          hello: "Hello Reny, I would like to place this order", tot: "Total", subtotal: "Subtotal", less: "Remove one", more: "Add one",
+          customer_name: "Your name", customer_name_ph: "e.g. Sara Ahmed", customer_phone: "Phone number", customer_phone_ph: "e.g. 01…", customer_address: "Delivery address (type it in)", customer_address_ph: "Area, street, building, floor, apartment", use_gps: "Share my location (optional)", gps_remove: "Remove my location", gps_locating: "Locating…", gps_ready: "Location will be sent with your order.", gps_unavailable: "Couldn't get your location. Your typed address is enough.", loc_label: "Location", payment_method: "Payment method", payment_cash: "Cash on delivery", payment_instapay: "InstaPay", payment_label: "Payment", items: "items",
+          mode_dark: "Dark", mode_light: "Light", back: "All pieces",
+          sp_material: "Material", sp_dimensions: "Dimensions", sp_weight: "Weight", sp_color: "Colour", sp_care: "Care",
+          ask: "Ask on WhatsApp", ask_msg: "Hello Reny, I have a question about:", zoom: "Zoom image", zoom_out: "Close zoom", in_space: "See it in your space",
+          living: "Living room", bedroom: "Bedroom", space_note: "A sketch to show scale and placement. Real photos can be added to each product.",
+          related: "You may also like", sold_out: "Sold out", loading: "Loading…", load_err: "Couldn't load the products. Please refresh the page.", photo_main: "Product", photo_close: "Close up", photo_room: "In a room"
+        },
+        ar: {
+          nav_shop: "المتجر", nav_story: "حكايتنا", nav_contact: "تواصل", order: "الطلب", eyebrow: "ديكور منزلي", h1: "بيت يشبهلك.",
+          lede: "بيتك مش مجرد مكان.. بيتك هو كتاب حكاياتك، وكل قطعة فيه بتتكلم عنك.",
+          cta: "ضيف حكاية لبيتك", shop_h: "لكل قطعة حكاية هتبدأ في بيتك.", story_eye: "طريقتنا", story_h: "بنختار على مهل.",
+          story_p: "ريني مجموعة صغيرة مختارة للبيت: خامات طبيعية وألوان هادية وأشكال تعيش أكتر من موسم.",
+          pt1: "خامات طبيعية", pt2: "ألوان هادية", pt3: "اطلب على واتساب", tag: "بيتك، بشكل أجمل.",
+          order_h: "طلبك", close: "إغلاق", total: "الإجمالي", send: "ابعت الطلب على واتساب",
+          note: "الأسعار تجريبية. التوصيل والدفع بيتأكدوا على واتساب.",
+          add: "أضف للطلب", added: "اتضافت", empty: "لسه فاضي. ضيف قطعة عجبتك.", all: "الكل", search: "دور على قطعة أو خامة أو أوضة",
+          sort_featured: "الترتيب: المختارات", sort_low: "السعر: من الأقل للأعلى", sort_high: "السعر: من الأعلى للأقل", sort_name: "الاسم: أ–ي",
+          hello: "أهلاً ريني، حابب أأكد الطلب ده", tot: "الإجمالي", subtotal: "الإجمالي الفرعي", less: "شيل واحدة", more: "زوّد واحدة",
+          customer_name: "الاسم", customer_name_ph: "مثال: سارة أحمد", customer_phone: "رقم الموبايل", customer_phone_ph: "مثال: 01…", customer_address: "عنوان التوصيل (اكتبه بإيدك)", customer_address_ph: "المنطقة، الشارع، العمارة، الدور، الشقة", use_gps: "ابعت لوكيشني (اختياري)", gps_remove: "شيل اللوكيشن", gps_locating: "جاري تحديد الموقع…", gps_ready: "اللوكيشن هيتبعت مع الطلب.", gps_unavailable: "معرفناش نحدد موقعك. العنوان المكتوب كفاية.", loc_label: "اللوكيشن", payment_method: "طريقة الدفع", payment_cash: "كاش عند الاستلام", payment_instapay: "InstaPay", payment_label: "الدفع", items: "قطع",
+          mode_dark: "داكن", mode_light: "فاتح", back: "كل القطع",
+          sp_material: "الخامة", sp_dimensions: "الأبعاد", sp_weight: "الوزن", sp_color: "اللون", sp_care: "العناية",
+          ask: "اسأل على واتساب", ask_msg: "أهلاً ريني، عندي سؤال عن:", zoom: "كبّر الصورة", zoom_out: "إغلاق التكبير", in_space: "شوفها في مكانك",
+          living: "أوضة المعيشة", bedroom: "أوضة النوم", space_note: "رسم توضيحي للمقاس ومكان القطعة. تقدر تضيف صور حقيقية لكل منتج.",
+          related: "ممكن يعجبك كمان", sold_out: "خلصت", loading: "جاري التحميل…", load_err: "معرفناش نحمّل المنتجات. حدّث الصفحة.", photo_main: "المنتج", photo_close: "تفصيل قريب", photo_room: "في أوضة"
+        }
+      };
+
+      var $ = function (id) {return document.getElementById(id)};
+      var app = $("app");
+      var lang = "en", mode = "light", cat = "all", query = "", sort = "featured", cart = {}, current = null, gIdx = 0, room = "living", qty = 1, geo = null, geoBusy = false, geoFail = false;
+      try {var sv = JSON.parse(localStorage.getItem("reny-prefs") || "{}"); if (sv.lang === "ar" || sv.lang === "en") lang = sv.lang; if (sv.mode === "dark" || sv.mode === "light") mode = sv.mode;} catch (e) { }
+      function save() {try {localStorage.setItem("reny-prefs", JSON.stringify({lang: lang, mode: mode}))} catch (e) { } }
+
+      function L(x) {return x == null ? "" : (typeof x === "string" ? x : (x[lang] || x.en || ""))}
+      function esc(s) {return String(s).replace(/[&<>"']/g, function (c) {return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]})}
+      function money(n) {return new Intl.NumberFormat(lang === "ar" ? "ar-EG" : "en-US").format(n) + " " + SETTINGS.currency[lang]}
+      function byId(id) {return PRODUCTS.filter(function (p) {return p.id === id})[0]}
+      function nm(p) {return L(p.name)}
+      function artSvg(k) {return '<svg viewBox="0 0 160 160" aria-hidden="true">' + ART[k] + '</svg>'}
+      function thumb(p) {
+        if (p.images && p.images.length) return '<img src="' + esc(p.images[0]) + '" alt="' + esc(nm(p)) + '" loading="lazy">';
+        return p.art && ART[p.art] ? artSvg(p.art) : "";
+      }
+      function scene(p, rk) {
+        var r = ROOMS[rk], s = r.slots[p.place || "table"] || r.slots.table;
+        var bx = s.x - s.s / 2, by = s.m === "rest" ? s.y - s.s * 0.81 : s.y - s.s / 2;
+        return '<svg viewBox="0 0 400 300" role="img" aria-label="' + esc(nm(p)) + '">' + r.base +
+          '<svg x="' + bx + '" y="' + by + '" width="' + s.s + '" height="' + s.s + '" viewBox="0 0 160 160">' + ART[p.art] + '</svg></svg>';
+      }
+      function waLink(text) {return "https://wa.me/" + SETTINGS.whatsapp + "?text=" + encodeURIComponent(text)}
+
+      function card(p) {
+        return '<article class="card' + (p.inStock ? '' : ' is-sold') + '"><a class="art" href="#p-' + p.id + '" data-go="p-' + p.id + '" style="background:var(--tint' + (p.tint || 1) + ')" aria-label="' + esc(nm(p)) + '">' + thumb(p) + '</a>' +
+          '<h3><a href="#p-' + p.id + '" data-go="p-' + p.id + '">' + esc(nm(p)) + '</a></h3><p class="meta">' + esc(L(p.short)) + '</p>' +
+          '<div class="row"><span class="price">' + money(p.price) + '</span><button class="add" type="button" data-add="' + p.id + '"' + (p.inStock ? '' : ' disabled') + '>' + (p.inStock ? T[lang].add : T[lang].sold_out) + '</button></div></article>';
+      }
+
+      /* ---------- home ---------- */
+      function usedCats() {var o = []; PRODUCTS.forEach(function (p) {if (o.indexOf(p.category) < 0) o.push(p.category)}); return o}
+      function renderChips() {
+        $("chips").innerHTML = ["all"].concat(usedCats()).map(function (k) {
+          var label = k === "all" ? T[lang].all : (CATEGORIES[k] ? L(CATEGORIES[k]) : k);
+          return '<button class="chip" type="button" data-cat="' + k + '" aria-pressed="' + (k === cat) + '">' + esc(label) + '</button>';
+        }).join("");
+      }
+      function renderGrid() {
+        var needle = query.trim().toLocaleLowerCase();
+        var shown = PRODUCTS.filter(function (p) {
+          if (cat !== "all" && p.category !== cat) return false;
+          if (!needle) return true;
+          return [L(p.name), L(p.short), L(p.description), L(CATEGORIES[p.category])].join(" ").toLocaleLowerCase().indexOf(needle) > -1;
+        });
+        shown.sort(function (a, b) {
+          if (sort === "price-low") return a.price - b.price;
+          if (sort === "price-high") return b.price - a.price;
+          if (sort === "name") return nm(a).localeCompare(nm(b), lang === "ar" ? "ar" : "en");
+          return (a.order - b.order) || (a.id - b.id);
+        });
+        $("grid").innerHTML = shown.map(card).join("") || '<p class="empty">' + (DATA_STATE === "loading" ? T[lang].loading : DATA_STATE === "error" ? T[lang].load_err : T[lang].empty) + '</p>';
+      }
+
+      /* ---------- product page ---------- */
+      function galleryItems(p) {
+        var g = (p.images || []).map(function (src) {return {t: "img", src: src}});
+        if (p.art && ART[p.art]) {g.push({t: "art"}, {t: "close"}, {t: "room"});}
+        return g;
+      }
+      function mediaHTML(p, it) {
+        if (it.t === "img") return '<img src="' + esc(it.src) + '" alt="' + esc(nm(p)) + '">';
+        if (it.t === "close") return '<svg viewBox="40 30 80 100" aria-hidden="true">' + ART[p.art] + '</svg>';
+        if (it.t === "room") return scene(p, "living");
+        return artSvg(p.art);
+      }
+      function mediaBg(p, it) {return it.t === "img" ? "var(--surface)" : (it.t === "room" ? "var(--wall)" : "var(--tint" + (p.tint || 1) + ")")}
+      function productHTML(p) {
+        var items = galleryItems(p), sp = p.specs || {};
+        var thumbs = items.length > 1 ? '<div class="thumbs" id="thumbs">' + items.map(function (it, i) {
+          return '<button class="tb" type="button" data-g="' + i + '" data-kind="' + (it.t === "img" ? "img" : it.t) + '" aria-pressed="' + (i === gIdx) + '" style="background:' + mediaBg(p, it) + '">' + mediaHTML(p, it) + '</button>';
+        }).join("") + '</div>' : "";
+        var rows = SPECS.filter(function (x) {return sp[x.key] && L(sp[x.key])}).map(function (x) {
+          return '<div class="spec"><dt>' + esc(L(x.label)) + '</dt><dd>' + esc(L(sp[x.key])) + '</dd></div>';
+        }).join("");
+        var space = (p.art && ART[p.art]) ? '<section class="space" id="space"><div class="head"><h2>' + T[lang].in_space + '</h2><div class="chips" id="roomChips"></div></div><div class="scene-box" id="roomBox"></div><p class="note">' + T[lang].space_note + '</p></section>' : "";
+        var rel = PRODUCTS.filter(function (x) {return x.id !== p.id}).sort(function (a, b) {return ((b.category === p.category) - (a.category === p.category)) || (a.order - b.order)}).slice(0, 4).map(card).join("");
+        var zoom = items.some(function (it) {return it.t === "img"}) ? '<button class="zoom-control" id="zoomBtn" type="button" aria-pressed="false">' + T[lang].zoom + '</button>' : "";
+        return '<a class="back" href="#shop" data-go="shop">' + T[lang].back + '</a>' +
+          '<div class="pd"><div><div class="media-wrap"><div class="stage" id="stage"></div>' + zoom + '</div>' + thumbs + '</div>' +
+          '<div><div class="cat">' + esc(CATEGORIES[p.category] ? L(CATEGORIES[p.category]) : "") + '</div><h1>' + esc(nm(p)) + '</h1>' +
+          '<div class="big">' + money(p.price) + '</div><p class="desc">' + esc(L(p.description || p.short)) + '</p>' +
+          '<div class="buy"><div class="qty"><button type="button" data-pq="-1" aria-label="' + T[lang].less + '">-</button><span id="pq">' + qty + '</span><button type="button" data-pq="1" aria-label="' + T[lang].more + '">+</button></div>' +
+          '<button class="cta" type="button" data-addqty="' + p.id + '"' + (p.inStock ? '' : ' disabled') + '>' + (p.inStock ? T[lang].add : T[lang].sold_out) + '</button></div>' +
+          '<a class="ghost" href="' + waLink(T[lang].ask_msg + " " + nm(p)) + '" target="_blank" rel="noopener">' + T[lang].ask + '</a>' +
+          (rows ? '<dl class="specs">' + rows + '</dl>' : "") + '</div></div>' + space +
+          '<section class="related"><h2>' + T[lang].related + '</h2><div class="grid">' + rel + '</div></section>';
+      }
+      function renderStage() {
+        var p = byId(current); if (!p) return;
+        var items = galleryItems(p), st = $("stage"); if (!st) return;
+        var it = items[gIdx] || items[0];
+        if (!it) {st.innerHTML = ""; return }
+        st.setAttribute("data-kind", it.t === "img" ? "img" : it.t);
+        st.classList.remove("is-zooming");
+        st.style.background = mediaBg(p, it);
+        st.innerHTML = mediaHTML(p, it);
+        var zoomBtn = $("zoomBtn");
+        if (zoomBtn) {zoomBtn.hidden = it.t !== "img"; zoomBtn.setAttribute("aria-pressed", "false"); zoomBtn.textContent = T[lang].zoom}
+        document.querySelectorAll("#thumbs .tb").forEach(function (b, i) {b.setAttribute("aria-pressed", String(i === gIdx))});
+      }
+      function renderRoom() {
+        var p = byId(current), box = $("roomBox"); if (!p || !box) return;
+        box.innerHTML = scene(p, room);
+        $("roomChips").innerHTML = ["living", "bedroom"].map(function (k) {
+          return '<button class="chip" type="button" data-room="' + k + '" aria-pressed="' + (k === room) + '">' + T[lang][k] + '</button>';
+        }).join("");
+      }
+      function renderProduct() {
+        var p = byId(current); if (!p) return;
+        $("productView").innerHTML = productHTML(p);
+        renderStage(); renderRoom();
+      }
+
+      /* ---------- views and routing ---------- */
+      function showHome(h) {
+        current = null; $("homeView").hidden = false; $("productView").hidden = true;
+        var el = h ? $(h) : null;
+        if (el && el.scrollIntoView) el.scrollIntoView({behavior: "smooth", block: "start"}); else window.scrollTo(0, 0);
+      }
+      function showProduct(id) {
+        current = id; gIdx = 0; qty = 1; room = "living";
+        $("homeView").hidden = true; $("productView").hidden = false;
+        renderProduct(); window.scrollTo(0, 0);
+      }
+      function route(h) {
+        if (h === undefined) h = (location.hash || "").slice(1);
+        openDrawer(false);
+        var m = /^p-(\d+)$/.exec(h);
+        if (m && byId(+m[1])) {showProduct(+m[1]); return }
+        showHome(h);
+      }
+      function go(h) {
+        try {if (location.hash !== "#" + h) location.hash = h} catch (e) { }
+        route(h);
+      }
+
+      /* ---------- cart ---------- */
+      function renderCart() {
+        var ids = Object.keys(cart).filter(function (k) {return cart[k] > 0});
+        var n = 0, total = 0, lines = [];
+        var html = ids.map(function (k) {
+          var p = byId(+k), q = cart[k]; n += q; total += q * p.price;
+          lines.push("• " + nm(p) + " × " + q + " — " + money(q * p.price));
+          return '<div class="line"><div class="thumb" style="background:var(--tint' + (p.tint || 1) + ')">' + thumb(p) + '</div>' +
+            '<div><strong><a href="#p-' + p.id + '" data-go="p-' + p.id + '">' + esc(nm(p)) + '</a></strong><div class="qty"><button type="button" data-dec="' + k + '" aria-label="' + T[lang].less + '">-</button><span>' + q + '</span><button type="button" data-inc="' + k + '" aria-label="' + T[lang].more + '">+</button></div></div>' +
+            '<span class="price">' + money(q * p.price) + '</span></div>';
+        }).join("");
+        $("items").innerHTML = html || '<p class="empty">' + T[lang].empty + '</p>';
+        $("count").textContent = n;
+        $("total").textContent = money(total);
+        $("orderSummary").textContent = n ? n + " " + T[lang].items + " · " + T[lang].subtotal + ": " + money(total) : "";
+        var s = $("send");
+        if (n) {
+          var details = [];
+          var customerName = $("customerName").value.trim(), customerPhone = $("customerPhone").value.trim(), customerAddress = $("customerAddress").value.trim();
+          if (customerName) details.push((lang === "ar" ? "الاسم: " : "Name: ") + customerName);
+          if (customerPhone) details.push((lang === "ar" ? "الموبايل: " : "Phone: ") + customerPhone);
+          if (customerAddress) details.push((lang === "ar" ? "التوصيل: " : "Delivery: ") + customerAddress);
+          if (geo) details.push(T[lang].loc_label + ": https://www.google.com/maps?q=" + geo.lat + "," + geo.lng);
+          var payEl = document.querySelector('input[name="payment"]:checked');
+          if (payEl) details.push(T[lang].payment_label + ": " + (payEl.value === "instapay" ? T[lang].payment_instapay : T[lang].payment_cash));
+          var orderText = "*" + SETTINGS.orderTitle + " — " + (lang === "ar" ? "طلب" : "Order") + "*\n\n" + T[lang].hello + "\n\n*" + (lang === "ar" ? "المنتجات" : "Items") + "*\n" + lines.join("\n") + "\n\n*" + T[lang].subtotal + ":* " + money(total) + "\n*" + T[lang].tot + ":* " + money(total) + (details.length ? "\n\n*" + (lang === "ar" ? "بيانات العميل" : "Customer details") + "*\n" + details.join("\n") : "");
+          s.href = waLink(orderText); s.setAttribute("aria-disabled", "false");
+        }
+        else {s.href = "#"; s.setAttribute("aria-disabled", "true")}
+      }
+      function add(id, n, btn) {
+        var pp = byId(id); if (!pp || !pp.inStock) return;
+        cart[id] = (cart[id] || 0) + n; renderCart();
+        if (btn) {var old = btn.textContent; btn.textContent = T[lang].added; setTimeout(function () {btn.textContent = old}, 800)}
+      }
+      function openDrawer(open) {$("drawer").hidden = !open; $("scrim").hidden = !open; if (open) $("closeBtn").focus()}
+
+      /* ---------- language and theme ---------- */
+      function applyText() {
+        app.dir = lang === "ar" ? "rtl" : "ltr";
+        document.body.setAttribute("data-mode", mode);
+        document.querySelectorAll("[data-i]").forEach(function (el) {var v = T[lang][el.getAttribute("data-i")]; if (v) el.textContent = v});
+        document.querySelectorAll("[data-ph]").forEach(function (el) {var v = T[lang][el.getAttribute("data-ph")]; if (v) el.placeholder = v});
+        document.querySelectorAll("[data-wm]").forEach(function (el) {el.textContent = lang === "ar" ? SETTINGS.brand.ar : SETTINGS.brand.en});
+        $("markLetter").textContent = (SETTINGS.brand.en || "R").charAt(0).toUpperCase();
+        $("langFull").textContent = lang === "ar" ? "English" : "عربي";
+        $("langShort").textContent = lang === "ar" ? "EN" : "ع";
+        $("themeLbl").textContent = mode === "light" ? T[lang].mode_dark : T[lang].mode_light;
+        $("themeIco").innerHTML = mode === "light" ? ICON_MOON : ICON_SUN;
+        $("waShow").textContent = SETTINGS.whatsappShow;
+        $("igShow").textContent = SETTINGS.instagram;
+        try {document.documentElement.lang = lang} catch (e) { }
+      }
+      function updateGps() {
+        $("gpsBtn").textContent = geoBusy ? T[lang].gps_locating : (geo ? T[lang].gps_remove : T[lang].use_gps);
+        $("gpsStatus").textContent = geo ? T[lang].gps_ready : (geoFail ? T[lang].gps_unavailable : "");
+      }
+      function renderAll() {
+        applyText(); updateGps(); renderChips(); renderGrid(); renderCart();
+        if (current !== null) renderProduct();
+      }
+
+      /* ---------- events ---------- */
+      app.addEventListener("click", function (e) {
+        var t = e.target, el;
+        if ((el = t.closest("[data-go]"))) {e.preventDefault(); go(el.getAttribute("data-go")); return }
+        if ((el = t.closest("[data-add]"))) {add(+el.getAttribute("data-add"), 1, el); return }
+        if ((el = t.closest("[data-addqty]"))) {add(+el.getAttribute("data-addqty"), qty, el); return }
+        if ((el = t.closest("[data-pq]"))) {qty = Math.max(1, Math.min(20, qty + (+el.getAttribute("data-pq")))); $("pq").textContent = qty; return }
+        if ((el = t.closest("[data-g]"))) {gIdx = +el.getAttribute("data-g"); renderStage(); return }
+        if (t.closest("#zoomBtn")) {
+          var stage = $("stage"), zoomButton = $("zoomBtn");
+          if (!stage || stage.getAttribute("data-kind") !== "img") return;
+          var active = stage.classList.toggle("is-zooming");
+          zoomButton.setAttribute("aria-pressed", String(active));
+          zoomButton.textContent = active ? T[lang].zoom_out : T[lang].zoom;
+          return
+        }
+        if ((el = t.closest("[data-room]"))) {room = el.getAttribute("data-room"); renderRoom(); return }
+        if ((el = t.closest("[data-cat]"))) {cat = el.getAttribute("data-cat"); renderChips(); renderGrid(); return }
+        if ((el = t.closest("[data-inc]"))) {cart[el.getAttribute("data-inc")]++; renderCart(); return }
+        if ((el = t.closest("[data-dec]"))) {var k = el.getAttribute("data-dec"); cart[k] = Math.max(0, cart[k] - 1); renderCart(); return }
+        if (t.closest("#cartBtn")) {openDrawer(true); return }
+        if (t.closest("#closeBtn") || t.closest("#scrim")) {openDrawer(false); return }
+        if (t.closest("#langBtn")) {lang = lang === "en" ? "ar" : "en"; save(); renderAll(); return }
+        if (t.closest("#themeBtn")) {mode = mode === "light" ? "dark" : "light"; save(); renderAll(); return }
+      });
+      $("search").addEventListener("input", function (e) {query = e.target.value; renderGrid()});
+      $("sort").addEventListener("change", function (e) {sort = e.target.value; renderGrid()});
+      app.addEventListener("mousemove", function (e) {
+        var stage = $("stage");
+        if (!stage || !stage.classList.contains("is-zooming") || stage.getAttribute("data-kind") !== "img") return;
+        var rect = stage.getBoundingClientRect();
+        var x = Math.max(0, Math.min(100, (e.clientX - rect.left) / rect.width * 100));
+        var y = Math.max(0, Math.min(100, (e.clientY - rect.top) / rect.height * 100));
+        var image = stage.querySelector("img");
+        if (image) image.style.transformOrigin = x + "% " + y + "%";
+      });
+      ["customerName", "customerPhone", "customerAddress"].forEach(function (id) {$(id).addEventListener("input", renderCart)});
+      document.querySelectorAll('input[name="payment"]').forEach(function (r) {r.addEventListener("change", renderCart)});
+
+      /* optional GPS: typed address is the main one, location is a bonus */
+      $("gpsBtn").addEventListener("click", function () {
+        if (geoBusy) return;
+        if (geo) {geo = null; geoFail = false; updateGps(); renderCart(); return }
+        if (!navigator.geolocation) {geoFail = true; updateGps(); return }
+        geoBusy = true; geoFail = false; updateGps();
+        navigator.geolocation.getCurrentPosition(function (pos) {
+          geo = {lat: pos.coords.latitude.toFixed(6), lng: pos.coords.longitude.toFixed(6)};
+          geoBusy = false; updateGps(); renderCart();
+        }, function () {
+          geoBusy = false; geoFail = true; updateGps();
+        }, {enableHighAccuracy: true, timeout: 10000, maximumAge: 60000});
+      });
+
+      /* Amazon-style zoom: hover (desktop) or tap/drag (touch) moves the zoomed area */
+      function moveZoom(cx, cy) {
+        var stage = $("stage"); if (!stage || !stage.classList.contains("is-zooming")) return;
+        var rect = stage.getBoundingClientRect(), img = stage.querySelector("img"); if (!img) return;
+        var x = Math.max(0, Math.min(100, (cx - rect.left) / rect.width * 100));
+        var y = Math.max(0, Math.min(100, (cy - rect.top) / rect.height * 100));
+        img.style.transformOrigin = x + "% " + y + "%";
+      }
+      function toggleZoom(cx, cy) {
+        var stage = $("stage"), zb = $("zoomBtn");
+        if (!stage || stage.getAttribute("data-kind") !== "img") return;
+        var on = stage.classList.toggle("is-zooming");
+        if (on) moveZoom(cx == null ? stage.getBoundingClientRect().left + stage.offsetWidth / 2 : cx, cy == null ? stage.getBoundingClientRect().top + stage.offsetHeight / 2 : cy);
+        else {var im = stage.querySelector("img"); if (im) im.style.transformOrigin = "center center"}
+        if (zb) {zb.setAttribute("aria-pressed", String(on)); zb.textContent = on ? T[lang].zoom_out : T[lang].zoom}
+      }
+      app.addEventListener("click", function (e) {
+        if (e.target.closest("#stage")) toggleZoom(e.clientX, e.clientY);
+      });
+      app.addEventListener("touchmove", function (e) {
+        var stage = $("stage");
+        if (stage && stage.classList.contains("is-zooming") && e.target.closest("#stage")) {e.preventDefault(); moveZoom(e.touches[0].clientX, e.touches[0].clientY)}
+      }, {passive: false});
+      document.addEventListener("keydown", function (e) {if (e.key === "Escape") openDrawer(false)});
+      window.addEventListener("hashchange", function () {route()});
+
+      document.querySelectorAll("[data-vine]").forEach(function (el) {el.innerHTML = leafyVine()});
+      renderAll();
+      loadAll().then(function () {
+        DATA_STATE = "ok"; renderAll();
+        var h0 = (location.hash || "").slice(1); if (/^p-\d+$/.test(h0)) route(h0);
+      }).catch(function (e) {
+        console.error(e); DATA_STATE = "error"; renderAll();
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

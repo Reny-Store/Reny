@@ -1,0 +1,9 @@
+key,value,note
+whatsapp,201556151051,"International format: 20 + number without the first 0, no plus sign"
+whatsapp_show,01556151051,How the number looks on the page
+instagram,@reny.home,Replace with your real account
+currency_en,EGP,Currency shown in English
+currency_ar,ج.م,Currency shown in Arabic
+brand_en,Reny,"Brand name in English (header, footer)"
+brand_ar,ريني,"Brand name in Arabic (header, footer)"
+order_title,Reny Home Decor,Title at the top of the WhatsApp order message
