@@ -1,0 +1,20 @@
+name: Update image manifest
+on:
+  push:
+    branches: [main]
+    paths: ['images/**']
+permissions:
+  contents: write
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/make-manifest.js
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add images/manifest.json
+          git diff --cached --quiet || git commit -m "Update image manifest"
+          git push
+ 
